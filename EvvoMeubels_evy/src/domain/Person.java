@@ -96,12 +96,6 @@ public abstract class Person {
 		return address;
 	}
 
-	@Override
-	public String toString() {
-		
-		return getId() + " " + getName() + " " + getLastName() + " " + getMiddleName() + " " + getEmail() + " "
-				+ getAddress() ;
-	}
-	
+
 	
 }

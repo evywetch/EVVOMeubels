@@ -2,7 +2,7 @@ package domain;
 
 import java.math.BigDecimal;
 
-import domain.Order.Builder;
+
 
 public class Test {
 
@@ -10,9 +10,11 @@ public class Test {
 		
 		
 		
-		Order order =  new Order.OrderBuilder().build();
+		Person person = new Customer.CustomerBuilder().name("evy").build();
+
+
 		
-		System.out.println(order.toString());
+		System.out.println(person.toString());
 	
 	}
 

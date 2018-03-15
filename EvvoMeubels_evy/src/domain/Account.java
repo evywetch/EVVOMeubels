@@ -42,8 +42,5 @@ public class Account {
 	public void setOwnerType(String ownerType) {
 		this.ownerType = ownerType;
 	}
-	
-	
-	
 
 }

@@ -100,8 +100,8 @@ public class Order {
 
 	@Override
 	public String toString() {
-		return "Customer: " + this.customerId + " Products : " + this.getProductId() + " Total : "
-				+ this.getTotalOrder() + "Total price: " + this.totalPrice + " Order date: " + this.getOrderDate();
+		return "Customer: " + customerId + " Products : " + getProductId() + " Total : "
+				+ getTotalOrder() + "Total price: " + totalPrice + " Order date: " + getOrderDate();
 	}
 
 }

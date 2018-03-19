@@ -1,22 +1,3 @@
 INDEX VERSION 1.127+/Users/evywetcharam/Documents/Evy_Workshop1/.metadata/.plugins/org.eclipse.jdt.core
-3670248649.index
 1233434396.index
-4036230714.index
-224092304.index
-1315525803.index
-1271342938.index
-2363563081.index
-506999199.index
-3735975305.index
-521061135.index
-2634225966.index
-4238018145.index
-404199878.index
-3131291862.index
-2103443106.index
-2440594760.index
-3767115374.index
-2867016645.index
-1969767409.index
-1753319412.index
-1067258947.index
+527791554.index

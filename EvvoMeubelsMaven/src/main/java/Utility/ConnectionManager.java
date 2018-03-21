@@ -11,10 +11,10 @@ public class ConnectionManager {
 	private static final Logger LOGGER = 
 			Logger.getLogger(ConnectionManager.class.getName()); 
 
-	public static Connection getConnection() throws SQLException{
+	public  Connection getConnection() throws SQLException, ClassNotFoundException{
 		
 		// Load the JDBC Driver
-		try {
+		
 			Class.forName("com.mysql.jdbc.Driver");
 			LOGGER.log(Level.INFO,"Driver is loaded");
 			
@@ -22,17 +22,12 @@ public class ConnectionManager {
 			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/workshop1","root","Pw19102528!");
 			
 			LOGGER.log(Level.INFO,"Database is connected");
+			
+			
+		
+		
+		
 			return conn;
-			
-		// Catch exception if Driver is not found	
-		} catch (ClassNotFoundException e) {
-			
-			e.printStackTrace();
-		}
-		
-		
-		
-		return null;
 	}
 	
 	

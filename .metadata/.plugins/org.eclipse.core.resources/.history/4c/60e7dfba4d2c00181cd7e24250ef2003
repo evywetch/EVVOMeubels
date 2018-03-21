@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-03-20T15:23:14</date>
+  <millis>1521555794678</millis>
+  <sequence>1</sequence>
+  <logger>Utility.LoggerManager</logger>
+  <level>INFO</level>
+  <class>Utility.LoggerManager</class>
+  <method>startLogger</method>
+  <thread>1</thread>
+  <message>log config is done</message>
+</record>
+</log>

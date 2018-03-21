@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-03-20T17:21:49</date>
+  <millis>1521562909313</millis>
+  <sequence>0</sequence>
+  <logger>Utility.LoggerManager</logger>
+  <level>INFO</level>
+  <class>Utility.LoggerManager</class>
+  <method>getLogger</method>
+  <thread>1</thread>
+  <message>log.xml is created</message>
+</record>
+<record>
+  <date>2018-03-20T17:21:49</date>
+  <millis>1521562909344</millis>
+  <sequence>1</sequence>
+  <logger>Utility.LoggerManager</logger>
+  <level>INFO</level>
+  <class>Utility.LoggerManager</class>
+  <method>getLogger</method>
+  <thread>1</thread>
+  <message>log config is done</message>
+</record>
+<record>
+  <date>2018-03-20T17:21:49</date>
+  <millis>1521562909345</millis>
+  <sequence>2</sequence>
+  <logger>Utility.LoggerManager</logger>
+  <level>INFO</level>
+  <class>Rsvier.evvo.medel.Test</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message> This is a warning</message>
+</record>
+<record>
+  <date>2018-03-20T17:21:49</date>
+  <millis>1521562909346</millis>
+  <sequence>3</sequence>
+  <logger>Utility.LoggerManager</logger>
+  <level>SEVERE</level>
+  <class>Rsvier.evvo.medel.Test</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Hello World</message>
+</record>
+</log>

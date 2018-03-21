@@ -1,0 +1,37 @@
+package Rsvier.evvo.medel;
+
+import java.math.BigDecimal;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import Utility.LoggerManager;
+
+
+
+public class Test {
+
+	private static final Logger logger = LoggerManager.startLogger();
+	public static void main(String[] args) {
+		
+		
+		
+		
+		int[] numbers = {1,2,3};
+		
+		try {
+			for(int i = 0 ; i < 4 ; i++){
+				System.out.println(numbers[i]);
+			} 
+		}catch(IndexOutOfBoundsException ex){
+			 logger.log( Level.WARNING ," This is a warning" );
+			// System.out.println(ex.toString());
+			}
+		
+		logger.info("Hello World");
+		
+	}
+
+}
+
+
+

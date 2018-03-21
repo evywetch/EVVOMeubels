@@ -1,0 +1,109 @@
+package DAO;
+
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import com.mysql.jdbc.Connection;
+
+import Rsvier.evvo.medel.Address;
+import Utility.ConnectionManager;
+
+public class AddressDAOImp implements AddressDAO {
+
+	private Logger logger = Logger.getLogger(AddressDAOImp.class.getName());
+	private ConnectionManager cm = new ConnectionManager();
+	private String query;
+	
+	// Get a list of all addresses
+
+	public List<Address> getAllAddresses() {
+
+		List<Address> addressList = new ArrayList();
+		
+		
+		query = "SELECT id,streetName,houseNumber,additionalHouseNumber,postalCode,city,country" + "FROM address";
+
+		
+		Connection conn;
+		
+	
+			// Connect to the database
+			
+			try {
+				conn = (Connection) cm.getConnection();
+				Statement st = conn.createStatement();
+				ResultSet rs = st.executeQuery(query);
+				
+// Get id,streetName,houseNumber,additionalHouseNumber,postalCode,city,country of each Address from the database
+				while (rs.next()) {
+
+					Address.AddressBuilder ab = new Address.AddressBuilder();
+					ab.addressId(rs.getInt(1));
+					ab.streetName(rs.getString(2));
+					ab.houseNumber(rs.getInt(3));
+					ab.additionalHousenumber(rs.getInt(4));
+					ab.postalCode(rs.getString(5));
+					ab.city(rs.getString(6));
+					ab.country(rs.getString(7));
+					Address address = ab.build();
+					
+			// Add Address to a list		
+					addressList.add(address);
+				}
+			} catch (ClassNotFoundException e) {
+				logger.log(Level.WARNING, " Can't load the Driver");
+			} catch (SQLException e) {
+				logger.log(Level.WARNING, " Can't connect to the database");
+				
+			}
+			
+		
+			 
+
+		return addressList;
+	}
+
+	public Address getAddress(int addressId) {
+		
+		query = "select SELECT streetName,houseNumber,additionalHouseNumber,postalCode,city,country" + "where id = ? ";
+		
+		Connection conn = null;
+		
+		try {
+			conn = (Connection) cm.getConnection();
+			Statement st = conn.createStatement();
+			
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+
+		return null;
+	}
+
+	public void createAddress(Address address) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void updateAddress(Address address) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void deleteAddress(Address address) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

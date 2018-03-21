@@ -409,3 +409,35 @@
 2018-03-21 11:03:45,714 [Worker-203] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/evywetcharam/Documents/Evy_Workshop1/EvvoMeubelsMaven/src/main/resources
 2018-03-21 11:03:45,716 [Worker-203] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2018-03-21 11:03:45,716 [Worker-203] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/evywetcharam/Documents/Evy_Workshop1/EvvoMeubelsMaven/src/test/resources
+2018-03-21 11:12:30,935 [Worker-205] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-21 11:12:30,935 [Worker-205] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/evywetcharam/Documents/Evy_Workshop1/EvvoMeubelsMaven/src/main/resources
+2018-03-21 11:12:30,936 [Worker-205] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-21 11:12:30,936 [Worker-205] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/evywetcharam/Documents/Evy_Workshop1/EvvoMeubelsMaven/src/test/resources
+2018-03-21 11:12:44,664 [Worker-207] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-21 11:12:44,664 [Worker-207] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/evywetcharam/Documents/Evy_Workshop1/EvvoMeubelsMaven/src/main/resources
+2018-03-21 11:12:44,665 [Worker-207] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-21 11:12:44,666 [Worker-207] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/evywetcharam/Documents/Evy_Workshop1/EvvoMeubelsMaven/src/test/resources
+2018-03-21 11:13:18,830 [Worker-198] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-21 11:13:18,831 [Worker-198] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/evywetcharam/Documents/Evy_Workshop1/EvvoMeubelsMaven/src/main/resources
+2018-03-21 11:13:18,831 [Worker-198] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-21 11:13:18,832 [Worker-198] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/evywetcharam/Documents/Evy_Workshop1/EvvoMeubelsMaven/src/test/resources
+2018-03-21 11:13:32,365 [Worker-203] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-21 11:13:32,365 [Worker-203] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/evywetcharam/Documents/Evy_Workshop1/EvvoMeubelsMaven/src/main/resources
+2018-03-21 11:13:32,366 [Worker-203] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-21 11:13:32,366 [Worker-203] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/evywetcharam/Documents/Evy_Workshop1/EvvoMeubelsMaven/src/test/resources
+2018-03-21 11:14:08,251 [Worker-177] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-21 11:14:08,251 [Worker-177] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/evywetcharam/Documents/Evy_Workshop1/EvvoMeubelsMaven/src/main/resources
+2018-03-21 11:14:08,253 [Worker-177] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-21 11:14:08,253 [Worker-177] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/evywetcharam/Documents/Evy_Workshop1/EvvoMeubelsMaven/src/test/resources
+2018-03-21 11:14:20,885 [Worker-207] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-21 11:14:20,885 [Worker-207] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/evywetcharam/Documents/Evy_Workshop1/EvvoMeubelsMaven/src/main/resources
+2018-03-21 11:14:20,889 [Worker-207] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-21 11:14:20,890 [Worker-207] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/evywetcharam/Documents/Evy_Workshop1/EvvoMeubelsMaven/src/test/resources
+2018-03-21 11:14:46,284 [Worker-206] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-21 11:14:46,285 [Worker-206] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/evywetcharam/Documents/Evy_Workshop1/EvvoMeubelsMaven/src/main/resources
+2018-03-21 11:14:46,286 [Worker-206] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-21 11:14:46,286 [Worker-206] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/evywetcharam/Documents/Evy_Workshop1/EvvoMeubelsMaven/src/test/resources
+2018-03-21 11:15:27,355 [Worker-207] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-21 11:15:27,355 [Worker-207] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/evywetcharam/Documents/Evy_Workshop1/EvvoMeubelsMaven/src/main/resources
+2018-03-21 11:15:27,357 [Worker-207] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-21 11:15:27,357 [Worker-207] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/evywetcharam/Documents/Evy_Workshop1/EvvoMeubelsMaven/src/test/resources

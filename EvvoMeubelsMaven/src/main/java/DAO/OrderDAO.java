@@ -7,9 +7,9 @@ import Rsvier.evvo.medel.Order;
 
 public interface OrderDAO {
 
-	public List<Order> getAllAddresses();
-	public Order getAddress(int orderId);
-	public void createAddress(Order order);
-	public void updateAddress(Order order);
-	public void deleteAddress(Order order);
+	public List<Order> getAllOrders();
+	public Order getOrder(int orderId);
+	public void createOrder(Order order);
+	public void updateOrder(Order order);
+	public void deleteOrder(Order order);
 }

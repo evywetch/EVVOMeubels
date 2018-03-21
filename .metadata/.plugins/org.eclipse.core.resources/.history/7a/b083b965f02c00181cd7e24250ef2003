@@ -6,31 +6,29 @@ import Rsvier.evvo.medel.Person;
 
 public class EmployeeDAOImp implements EmployeeDAO{
 
-	public List<Person> getAllEmployees() {
+	public List<Person> getAllAddresses() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public Person getEmployee(int employeeId) {
+	public Person getAddress(int employeeId) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public void createEmployee(Person employee) {
+	public void createAddress(Person employee) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public void updateEmployee(Person employee) {
+	public void updateAddress(Person employee) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public void deleteEmployee(Person employee) {
+	public void deleteAddress(Person employee) {
 		// TODO Auto-generated method stub
 		
 	}
-
-	
 
 }

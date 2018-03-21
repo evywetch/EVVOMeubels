@@ -6,31 +6,30 @@ import Rsvier.evvo.medel.Product;
 
 public class ProductDAOImp implements ProductDAO {
 
-	public List<Product> getAllProducts() {
+	public List<Product> getAllAddresses() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public Product getProduct(int productId) {
+	public Product getAddress(int productId) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public void createProduct(Product product) {
+	public void createAddress(Product product) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public void updateProduct(Product product) {
+	public void updateAddress(Product product) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public void deleteProduct(Product product) {
+	public void deleteAddress(Product product) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	
 	
 }

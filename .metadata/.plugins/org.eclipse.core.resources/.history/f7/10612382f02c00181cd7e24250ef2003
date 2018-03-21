@@ -6,33 +6,31 @@ import Rsvier.evvo.medel.Order;
 
 public class OrderDAOImp implements OrderDAO {
 
-	public List<Order> getAllOrders() {
+	
+
+	public List<Order> getAllAddresses() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public Order getOrder(int orderId) {
+	public Order getAddress(int orderId) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public void createOrder(Order order) {
+	public void createAddress(Order order) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public void updateOrder(Order order) {
+	public void updateAddress(Order order) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public void deleteOrder(Order order) {
+	public void deleteAddress(Order order) {
 		// TODO Auto-generated method stub
 		
 	}
-
-	
-
-	
 
 }

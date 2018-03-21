@@ -7,9 +7,9 @@ import Rsvier.evvo.medel.Product;
 
 public interface ProductDAO {
 
-	public List<Product> getAllAddresses();
-	public Product getAddress(int productId);
-	public void createAddress(Product product);
-	public void updateAddress(Product product);
-	public void deleteAddress(Product product);
+	public List<Product> getAllProducts();
+	public Product getProduct(int productId);
+	public void createProduct(Product product);
+	public void updateProduct(Product product);
+	public void deleteProduct(Product product);
 }

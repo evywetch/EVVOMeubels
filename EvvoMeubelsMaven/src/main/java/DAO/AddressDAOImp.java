@@ -19,7 +19,7 @@ import Utility.LoggerManager;
 public class AddressDAOImp implements AddressDAO {
 
 	private Logger logger = LoggerManager.getLogger();
-	private ConnectionManager cm = new ConnectionManager();
+	
 	private Connection conn;
 	private PreparedStatement ps;
 	private String query;
@@ -35,7 +35,7 @@ public class AddressDAOImp implements AddressDAO {
 		// Connect to the database
 
 		try {
-			conn = (Connection) cm.getConnection();
+			conn = (Connection) ConnectionManager.getConnection();
 			Statement st = conn.createStatement();
 			ResultSet rs = st.executeQuery(query);
 
@@ -75,7 +75,7 @@ public class AddressDAOImp implements AddressDAO {
 		query = "select * from address where id = ? ";
 
 		try {
-			conn = (Connection) cm.getConnection();
+			conn = (Connection) ConnectionManager.getConnection();
 			ps = conn.prepareStatement(query);
 			ps.setInt(1, addressId);
 			ResultSet rs = ps.executeQuery();

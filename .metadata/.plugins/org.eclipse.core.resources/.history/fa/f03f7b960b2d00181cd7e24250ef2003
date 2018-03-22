@@ -1,0 +1,48 @@
+package Utility;
+
+import java.io.IOException;
+import java.util.logging.*;
+
+public class LoggerManager {
+
+	private static final Logger logger = Logger.getLogger(LoggerManager.class.getName());
+	private static FileHandler fileHandler;
+private static ConsoleHandler ch;
+
+	public LoggerManager() {
+
+	}
+
+	public static Logger getLogger() {
+
+		try {
+			if (fileHandler == null && ch == null ) {
+
+				ch = new ConsoleHandler();
+				fileHandler = new FileHandler("log.xml",true);
+				logger.info("Test1");
+
+			}
+			ch.setLevel(Level.SEVERE);
+			
+			fileHandler.setLevel(Level.ALL);
+			fileHandler.setFormatter(new SimpleFormatter());
+			logger.addHandler(fileHandler);
+			logger.addHandler(ch);
+
+			logger.warning("Test2");
+
+		} catch (SecurityException e) {
+
+			e.printStackTrace();
+		} catch (IOException e) {
+			logger.log(Level.SEVERE, "Test3 ", e);
+		}
+		return logger;
+	}
+}
+
+
+// "log.xml is created"
+// "log config is done"
+// "Error occured in FileHandler "

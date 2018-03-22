@@ -9,12 +9,12 @@ public class Test {
 	public static void main(String[] args) {
 		Connection conn = null;
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+//			Class.forName("com.mysql.jdbc.Driver");
 
 			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/userInfo","root","Pw19102528!");
 			String query = "select email from users where id = ?";
 			PreparedStatement ps = conn.prepareStatement(query);
-			ps.setInt(1, 1);
+			ps.setInt(1, 2);
 			
 			ResultSet rs = ps.executeQuery();
 			
@@ -24,9 +24,9 @@ public class Test {
 				
 			}
 
-		} catch (ClassNotFoundException e) {
+		} /*catch (ClassNotFoundException e) {
 			e.printStackTrace();
-		} catch (SQLException e) {
+		} */ catch (SQLException e) {
 			e.printStackTrace();
 		}
 

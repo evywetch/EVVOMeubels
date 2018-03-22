@@ -6,29 +6,31 @@ import Rsvier.evvo.medel.Person;
 
 public class CustomerDAOImp implements CustomerDAO{
 
-	public List<Person> getAllAddresses() {
+	public List<Person> getAllCustomers() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public Person getAddress(int customerId) {
+	public Person getCustomer(int customerId) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public void createAddress(Person customer) {
+	public void createCustomer(Person customer) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public void updateAddress(Person customer) {
+	public void updateCustomer(Person customer) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public void deleteAddress(Person customer) {
+	public void deleteCustomer(Person customer) {
 		// TODO Auto-generated method stub
 		
 	}
+
+	
 
 }

@@ -12,9 +12,9 @@ public class Test {
 
 	public static void main(String[] args) {
 
-		logger.log(Level.INFO, " This is a warning");
+		logger.log(Level.INFO, " Test1");
 
-		logger.severe("Hello World");
+		logger.severe("Test2");
 
 	}
 

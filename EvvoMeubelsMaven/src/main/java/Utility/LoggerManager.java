@@ -5,33 +5,33 @@ import java.util.logging.*;
 
 public class LoggerManager {
 
-	private static final Logger logger = Logger.getLogger(LoggerManager.class.getName());;
-	private static FileHandler fileHandler;
-
 	public LoggerManager() {
 
 	}
 
 	public static Logger getLogger() {
 
+		Logger logger = Logger.getLogger(LoggerManager.class.getName());
+		FileHandler fileHandler = null;
 		try {
 			if (fileHandler == null) {
 
-				fileHandler = new FileHandler("log.xml");
+				fileHandler = new FileHandler("log.xml", true);
 				logger.info("log.xml is created");
 
 			}
 
 			fileHandler.setLevel(Level.ALL);
+			fileHandler.setFormatter(new SimpleFormatter());
 			logger.addHandler(fileHandler);
 
-			logger.info("log config is done");
+			logger.info("log configuration is done");
 
 		} catch (SecurityException e) {
-			
+
 			e.printStackTrace();
 		} catch (IOException e) {
-			logger.log(Level.SEVERE, "Error occured in FileHandler ", e);
+			logger.log(Level.WARNING, "Error occured in FileHandler ", e);
 		}
 		return logger;
 	}

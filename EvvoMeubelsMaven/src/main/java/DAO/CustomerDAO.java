@@ -7,9 +7,9 @@ import Rsvier.evvo.medel.Person;
 
 public interface CustomerDAO {
 
-	public List<Person> getAllAddresses();
-	public Person getAddress(int customerId);
-	public void createAddress(Person customer);
-	public void updateAddress(Person customer);
-	public void deleteAddress(Person customer);
+	public List<Person> getAllCustomers();
+	public Person getCustomer(int customerId);
+	public void createCustomer(Person customer);
+	public void updateCustomer(Person customer);
+	public void deleteCustomer(Person customer);
 }

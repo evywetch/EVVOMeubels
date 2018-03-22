@@ -2,19 +2,53 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2018-03-20T17:21:49</date>
-  <millis>1521562909313</millis>
-  <sequence>0</sequence>
+  <date>2018-03-21T11:57:43</date>
+  <millis>1521629863985</millis>
+  <sequence>3</sequence>
   <logger>Utility.LoggerManager</logger>
-  <level>INFO</level>
-  <class>Utility.LoggerManager</class>
-  <method>getLogger</method>
+  <level>SEVERE</level>
+  <class>Test.Test</class>
+  <method>main</method>
   <thread>1</thread>
-  <message>log.xml is created</message>
+  <message>Hello World</message>
 </record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
 <record>
-  <date>2018-03-20T17:21:49</date>
-  <millis>1521562909344</millis>
+  <date>2018-03-21T14:02:46</date>
+  <millis>1521637366841</millis>
+  <sequence>3</sequence>
+  <logger>Utility.LoggerManager</logger>
+  <level>SEVERE</level>
+  <class>Test.Test</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Hello World</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-03-21T14:04:39</date>
+  <millis>1521637479719</millis>
+  <sequence>3</sequence>
+  <logger>Utility.LoggerManager</logger>
+  <level>SEVERE</level>
+  <class>Test.Test</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Hello World</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-03-21T14:06:08</date>
+  <millis>1521637568885</millis>
   <sequence>1</sequence>
   <logger>Utility.LoggerManager</logger>
   <level>INFO</level>
@@ -24,25 +58,135 @@
   <message>log config is done</message>
 </record>
 <record>
-  <date>2018-03-20T17:21:49</date>
-  <millis>1521562909345</millis>
+  <date>2018-03-21T14:06:08</date>
+  <millis>1521637568887</millis>
   <sequence>2</sequence>
   <logger>Utility.LoggerManager</logger>
   <level>INFO</level>
-  <class>Rsvier.evvo.medel.Test</class>
+  <class>Test.Test</class>
   <method>main</method>
   <thread>1</thread>
   <message> This is a warning</message>
 </record>
 <record>
-  <date>2018-03-20T17:21:49</date>
-  <millis>1521562909346</millis>
+  <date>2018-03-21T14:06:08</date>
+  <millis>1521637568888</millis>
   <sequence>3</sequence>
   <logger>Utility.LoggerManager</logger>
   <level>SEVERE</level>
-  <class>Rsvier.evvo.medel.Test</class>
+  <class>Test.Test</class>
   <method>main</method>
   <thread>1</thread>
   <message>Hello World</message>
 </record>
 </log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-03-21T14:09:12</date>
+  <millis>1521637752159</millis>
+  <sequence>1</sequence>
+  <logger>Utility.LoggerManager</logger>
+  <level>INFO</level>
+  <class>Utility.LoggerManager</class>
+  <method>getLogger</method>
+  <thread>1</thread>
+  <message>Test</message>
+</record>
+<record>
+  <date>2018-03-21T14:09:12</date>
+  <millis>1521637752161</millis>
+  <sequence>2</sequence>
+  <logger>Utility.LoggerManager</logger>
+  <level>INFO</level>
+  <class>Test.Test</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message> Test</message>
+</record>
+<record>
+  <date>2018-03-21T14:09:12</date>
+  <millis>1521637752162</millis>
+  <sequence>3</sequence>
+  <logger>Utility.LoggerManager</logger>
+  <level>SEVERE</level>
+  <class>Test.Test</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Test</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-03-21T14:11:50</date>
+  <millis>1521637910841</millis>
+  <sequence>1</sequence>
+  <logger>Utility.LoggerManager</logger>
+  <level>INFO</level>
+  <class>Utility.LoggerManager</class>
+  <method>getLogger</method>
+  <thread>1</thread>
+  <message>Test</message>
+</record>
+<record>
+  <date>2018-03-21T14:11:50</date>
+  <millis>1521637910843</millis>
+  <sequence>2</sequence>
+  <logger>Utility.LoggerManager</logger>
+  <level>INFO</level>
+  <class>Test.Test</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message> Test</message>
+</record>
+<record>
+  <date>2018-03-21T14:11:50</date>
+  <millis>1521637910844</millis>
+  <sequence>3</sequence>
+  <logger>Utility.LoggerManager</logger>
+  <level>SEVERE</level>
+  <class>Test.Test</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Test</message>
+</record>
+</log>
+Mar 21, 2018 2:16:46 PM Utility.LoggerManager getLogger
+INFO: Test
+Mar 21, 2018 2:16:46 PM Test.Test main
+INFO:  Test
+Mar 21, 2018 2:16:46 PM Test.Test main
+SEVERE: Test
+Mar 21, 2018 2:20:50 PM Utility.LoggerManager getLogger
+WARNING: Test2
+Mar 21, 2018 2:20:50 PM Test.Test main
+INFO:  Test4
+Mar 21, 2018 2:20:50 PM Test.Test main
+SEVERE: Test5
+Mar 21, 2018 2:23:28 PM Utility.LoggerManager getLogger
+WARNING: Test2
+Mar 21, 2018 2:23:28 PM Test.Test main
+INFO:  Test4
+Mar 21, 2018 2:23:28 PM Test.Test main
+SEVERE: Test5
+Mar 21, 2018 3:17:45 PM Utility.LoggerManager getLogger
+INFO: log configuration is done
+Mar 21, 2018 3:17:45 PM Utility.ConnectionManager getConnection
+INFO: Driver is loaded
+Mar 21, 2018 3:25:39 PM Utility.LoggerManager getLogger
+INFO: log configuration is done
+Mar 21, 2018 3:25:39 PM Utility.ConnectionManager getConnection
+INFO: Driver is loaded
+Mar 21, 2018 3:25:40 PM Utility.ConnectionManager getConnection
+INFO: Database is connected
+Mar 21, 2018 3:34:39 PM Utility.LoggerManager getLogger
+INFO: log configuration is done
+Mar 21, 2018 3:34:49 PM Utility.LoggerManager getLogger
+INFO: log configuration is done
+Mar 21, 2018 3:43:51 PM Utility.LoggerManager getLogger
+INFO: log configuration is done
+Mar 21, 2018 3:58:00 PM Utility.LoggerManager getLogger
+INFO: log configuration is done

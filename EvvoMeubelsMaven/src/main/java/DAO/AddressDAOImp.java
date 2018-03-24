@@ -14,6 +14,7 @@ import com.mysql.jdbc.Connection;
 
 import Rsvier.evvo.medel.Address;
 import Utility.ConnectionManager;
+import Utility.ConnectionManagerXML;
 import Utility.LoggerManager;
 
 public class AddressDAOImp implements AddressDAO {
@@ -30,12 +31,12 @@ public class AddressDAOImp implements AddressDAO {
 
 		List<Address> addressList = new ArrayList();
 
-		query = "SELECT id,streetName,houseNumber,additionalHouseNumber,postalCode,city,country" + "FROM address";
+		query = "SELECT id," + "FROM address";
 
 		// Connect to the database
 
-		try {
-			conn = (Connection) ConnectionManager.getConnection();
+		try ( Connection conn = (Connection) ConnectionManagerXML.getConnection();){
+			
 			Statement st = conn.createStatement();
 			ResultSet rs = st.executeQuery(query);
 
@@ -57,8 +58,6 @@ public class AddressDAOImp implements AddressDAO {
 				// Add Address to a list
 				addressList.add(address);
 			}
-		} catch (ClassNotFoundException e) {
-			logger.log(Level.INFO, " Can't load the Driver");
 		} catch (SQLException e) {
 			logger.log(Level.INFO, " Can't connect to the database");
 
@@ -72,10 +71,10 @@ public class AddressDAOImp implements AddressDAO {
 		Address.AddressBuilder ab = new Address.AddressBuilder();
 		Address address = null;
 
-		query = "select * from address where id = ? ";
+		query = "SELECT * FROM address where id = ? ";
 
-		try {
-			conn = (Connection) ConnectionManager.getConnection();
+		try(Connection conn = (Connection) ConnectionManagerXML.getConnection();) {
+			
 			ps = conn.prepareStatement(query);
 			ps.setInt(1, addressId);
 			ResultSet rs = ps.executeQuery();
@@ -94,8 +93,6 @@ public class AddressDAOImp implements AddressDAO {
 
 			address = ab.build();
 
-		} catch (ClassNotFoundException e) {
-			logger.log(Level.INFO, " Can't load the Driver");
 		} catch (SQLException e) {
 			logger.log(Level.INFO, " Can't connect to the database");
 		}
@@ -106,16 +103,69 @@ public class AddressDAOImp implements AddressDAO {
 
 	public void createAddress(Address address) {
 
+		query = "INSERT into address (streetName,houseNumber,additionalHouseNumber,postalCode,city,country) VALUES (?,?,?,?,?,?)";
+		
+		
+		try(Connection conn = (Connection) ConnectionManagerXML.getConnection();) {
+			ps =conn.clientPrepareStatement(query);
+			
+			ps.setString(1, address.getStreetName());
+			ps.setInt(2, address.getHouseNumber());
+			ps.setInt(3, address.getAdditionalHouseNumber());
+			ps.setString(4, address.getPostalCode());
+			ps.setString(5, address.getCity());
+			ps.setString(6, address.getCountry());
+			
+			ps.executeUpdate();
+			
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
 	}
 
 	public void updateAddress(Address address) {
-		// TODO Auto-generated method stub
+		query = "UPDATE address" +
+				"SET streetName = ?, houseNumber = ? , additionalHouseNumber = ?, postalCode = ?, city = ?, country = ?" +
+				"WHERE id = ?";
+		
+		try(Connection conn = (Connection) ConnectionManagerXML.getConnection();) {
+			ps =conn.clientPrepareStatement(query);
+			
+			ps.setString(1, address.getStreetName());
+			ps.setInt(2, address.getHouseNumber());
+			ps.setInt(3, address.getAdditionalHouseNumber());
+			ps.setString(4, address.getPostalCode());
+			ps.setString(5, address.getCity());
+			ps.setString(6, address.getCountry());
+			ps.setInt(7, address.getAddressId());
+			
+			ps.executeUpdate();
+			
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
 
 	}
 
 	public void deleteAddress(Address address) {
-		// TODO Auto-generated method stub
-
+		
+		query = "DELETE FROM address" + "WHERE id = ?";
+		
+		
+		try (Connection conn = (Connection) ConnectionManagerXML.getConnection();){
+			ps = conn.prepareStatement(query);
+			ps.setInt(1, address.getAddressId());
+			
+			ps.executeUpdate();
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
 	}
 
 }

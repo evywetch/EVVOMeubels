@@ -29,7 +29,7 @@ public class TestDom {
 			
 			for(int i = 0; i < data.getLength() ; i++){
 				Node n = data.item(i);
-				if
+				
 			}
 			
 		} catch (ParserConfigurationException e) {

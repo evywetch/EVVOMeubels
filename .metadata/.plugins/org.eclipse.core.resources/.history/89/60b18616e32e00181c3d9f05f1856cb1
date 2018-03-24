@@ -1,0 +1,42 @@
+package Utility;
+
+import java.io.IOException;
+import java.util.logging.*;
+
+public class LoggerManager {
+
+	public LoggerManager() {
+
+	}
+
+	public static Logger getLogger() {
+
+		// Create Logger object and give a name to the object as this class
+		Logger logger = Logger.getLogger(LoggerManager.class.getName());
+
+		FileHandler fileHandler = null;
+		try {
+			if (fileHandler == null) {
+				// Create an xml file to record the logs
+
+				fileHandler = new FileHandler("log.xml", true);
+
+			}
+			// Configure fileHandler to record all message level and append the record
+			
+			fileHandler.setLevel(Level.ALL);
+
+			// add simple format to FileHandler
+			fileHandler.setFormatter(new SimpleFormatter());
+
+			// add FileHandler to Logger
+			logger.addHandler(fileHandler);
+
+		} catch (SecurityException e) {
+			logger.info(fileHandler + " is created");
+		} catch (IOException e) {
+			logger.log(Level.WARNING, "Error occured in FileHandler ", e);
+		}
+		return logger;
+	}
+}

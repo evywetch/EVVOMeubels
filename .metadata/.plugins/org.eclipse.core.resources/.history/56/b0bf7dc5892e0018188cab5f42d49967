@@ -1,0 +1,18 @@
+package Utility;
+
+
+
+public class ConnectionManagerXML {
+
+	
+	
+	private static String URL;
+	private static String USER;
+	private static String PASSWORD;
+	
+	public static void initializeXml(){
+		
+		File xmlFile = new File()
+	}
+	}
+

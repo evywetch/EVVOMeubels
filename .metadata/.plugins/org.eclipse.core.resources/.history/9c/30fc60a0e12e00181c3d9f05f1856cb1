@@ -1,0 +1,63 @@
+package Utility;
+
+import java.io.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
+
+public class ConnectionManagerXML {
+
+	private static String URL;
+	private static String USER;
+	private static String PASSWORD;
+
+	public static void initializeXml() {
+		
+		// Create an xml file
+
+		File xmlFile = new File("src/main/java/Utility/EvyDatabaseInfo.xml");
+
+		if (xmlFile.exists()) {
+
+			DocumentBuilder db;
+			try {
+				db = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+				Document doc = db.parse(xmlFile);
+				doc.getDocumentElement().normalize();
+				URL = doc.getElementsByTagName("url").item(0).getTextContent();
+				USER = doc.getElementsByTagName("user").item(0).getTextContent();
+				PASSWORD = doc.getElementsByTagName("password").item(0).getTextContent();
+			} catch (ParserConfigurationException | SAXException | IOException e) {
+
+				e.printStackTrace();
+			}
+
+		} else {
+			System.out.println("File does not exist");
+		}
+	}
+
+	public static Connection getConnection() {
+
+		if (URL == null && USER == null && PASSWORD == null) {
+			initializeXml();
+		}
+
+		Connection conn = null;
+		try {
+			conn = DriverManager.getConnection(URL, USER, PASSWORD);
+		} catch (SQLException e) {
+			System.out.println("Can't connect to the database");
+			e.printStackTrace();
+		}
+
+		return conn;
+	}
+}

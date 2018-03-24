@@ -1,0 +1,38 @@
+package Utility;
+
+import java.io.*;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
+
+public class ConnectionManagerXML {
+
+	
+	
+	private static String URL;
+	private static String USER;
+	private static String PASSWORD;
+	
+	public static void initializeXml(){
+		
+		File xmlFile = new File("EvyDatabaseInfo.xml");
+		
+		if(xmlFile.exists()){
+			
+				DocumentBuilder db;
+				try {
+					db = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+					Document doc = db.parse(xmlFile);
+				} catch (ParserConfigurationException | SAXException | IOException e) {
+					
+					e.printStackTrace();
+				} 
+			
+		}
+	}
+	}
+

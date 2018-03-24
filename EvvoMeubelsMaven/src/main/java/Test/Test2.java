@@ -7,41 +7,28 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import Utility.ConnectionManager;
+import Utility.ConnectionManagerXML;
 
 public class Test2 {
 
 	public static void main(String[] args) {
 
-		Connection conn = null;
-		try {
-//			Class.forName("com.mysql.jdbc.Driver");
-
-			
-				conn = ConnectionManager.getConnection();
-			
+		try (Connection conn = ConnectionManagerXML.getConnection();) {
 			String query = "select email from users where id = ?";
-			PreparedStatement ps = conn.prepareStatement(query);
-			ps.setInt(1, 1);
-			
-			ResultSet rs = ps.executeQuery();
-			
-			while(rs.next()){
-				
-				System.out.println( "Email = " + rs.getString(1));
-				
-			}
+			PreparedStatement ps;
+			ps = conn.prepareStatement(query);
+			ps.setInt(1, 2);
 
-		} catch (ClassNotFoundException e) {
-			System.out.println("Can't get connection");
-		
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+
+				System.out.println("Email = " + rs.getString(1));
+
+			}
 		} catch (SQLException e) {
-			System.out.println("Can't connect database");
-		}
-		
-		try {
-			conn.close();
-		} catch (SQLException e) {
-			System.out.println("Can't close connection");
+
+			e.printStackTrace();
 		}
 
 	}

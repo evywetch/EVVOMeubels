@@ -1,0 +1,32 @@
+package Utility;
+
+import java.io.*;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+public class ConnectionManagerXML {
+
+	
+	
+	private static String URL;
+	private static String USER;
+	private static String PASSWORD;
+	
+	public static void initializeXml(){
+		
+		File xmlFile = new File("EvyDatabaseInfo.xml");
+		
+		if(xmlFile.exists()){
+			try {
+				DocumentBuilder db = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+				
+			} catch (ParserConfigurationException e) {
+				
+				e.printStackTrace();
+			}
+		}
+	}
+	}
+

@@ -1,29 +1,69 @@
 package Utility;
 
+import java.io.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
 
 public class ConnectionManagerXML {
 
-	
-	
-	/*
+	private static String URL;
+	private static String USER;
+	private static String PASSWORD;
 
-	public static Connection getConnection()  {
+	public static void initializeXml() {
 
+		// Create an xml file
 
-		// create String variables to hold url, user and password
-		String url = null;
-		String user = null;
-		String password = null;
+		File xmlFile = new File("src/main/java/Utility/DBInfo.xml");
 
+		// if file exist, assign values from xml filr to URL, USER , PASSWORD variables
 		
-		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-		DocumentBuilder builder = factory.newDocumentBuilder();
-		Document doc = builder.parse("EvyDatabaseInfo.xml");
-		
+		if (xmlFile.exists()) {
 
-		return conn;
-		
-		*/
+			DocumentBuilder db;
+			try {
+				db = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+				Document doc = db.parse(xmlFile);
+				doc.getDocumentElement().normalize();
+				URL = doc.getElementsByTagName("url").item(0).getTextContent();
+				USER = doc.getElementsByTagName("user").item(0).getTextContent();
+				PASSWORD = doc.getElementsByTagName("password").item(0).getTextContent();
+			} catch (ParserConfigurationException | SAXException | IOException e) {
+
+				e.printStackTrace();
+			}
+			// if file does not exist, output this message
+		} else {
+			System.out.println("File does not exist");
+		}
 	}
 
+	public static Connection getConnection() {
+
+		// If URL, USER , PASSWORD are null , initialize it.
+
+		if (URL == null && USER == null && PASSWORD == null) {
+			initializeXml();
+		}
+
+		Connection conn = null;
+		try {
+
+			// get the connection
+			conn = DriverManager.getConnection(URL, USER, PASSWORD);
+		} catch (SQLException e) {
+			System.out.println("Can't connect to the database");
+			e.printStackTrace();
+		}
+
+		return conn;
+	}
+}

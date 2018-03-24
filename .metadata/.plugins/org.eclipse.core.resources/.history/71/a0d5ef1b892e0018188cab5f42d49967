@@ -1,0 +1,7 @@
+<data>
+
+<url>jdbc:mysql://localhost:3306/userInfo</url>
+<user>root</user>
+<password>Pw19102528!</password>
+
+</data>

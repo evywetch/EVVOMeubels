@@ -11,25 +11,29 @@ public class LoggerManager {
 
 	public static Logger getLogger() {
 
+		// Create Logger object and give a name to the object as this class
 		Logger logger = Logger.getLogger(LoggerManager.class.getName());
+
 		FileHandler fileHandler = null;
 		try {
 			if (fileHandler == null) {
+				// Create an xml file to record the logs and append the record
 
 				fileHandler = new FileHandler("log.xml", true);
-				logger.info("log.xml is created");
 
 			}
-
+			// Configure fileHandler to record all message level 
+			
 			fileHandler.setLevel(Level.ALL);
+
+			// add simple format to FileHandler
 			fileHandler.setFormatter(new SimpleFormatter());
+
+			// add FileHandler to Logger
 			logger.addHandler(fileHandler);
 
-			logger.info("log configuration is done");
-
 		} catch (SecurityException e) {
-
-			e.printStackTrace();
+			logger.info(fileHandler + " is created");
 		} catch (IOException e) {
 			logger.log(Level.WARNING, "Error occured in FileHandler ", e);
 		}
